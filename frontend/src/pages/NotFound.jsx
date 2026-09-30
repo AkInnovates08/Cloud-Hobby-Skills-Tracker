@@ -1,0 +1,1 @@
+import {Link} from "react-router-dom";import {Compass} from "lucide-react";export default function NotFound(){return <div className="not-found"><Compass size={42}/><h1>Page not found</h1><p>The route you opened does not exist.</p><Link className="primary-btn" to="/dashboard">Back to dashboard</Link></div>}

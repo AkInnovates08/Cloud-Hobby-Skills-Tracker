@@ -1,0 +1,54 @@
+PROJECT EXECUTION - WINDOWS
+
+1. Install Python 3.10+ and Node.js 18+.
+
+2. Extract the ZIP.
+
+3. Open PowerShell in the extracted Cloud-Hobby-Skills-Tracker folder.
+
+4. Backend:
+   cd backend
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   pip install -r requirements.txt
+   Copy-Item .env.example .env
+   uvicorn app.main:app --reload --port 8000
+
+   Keep this terminal open.
+
+5. Open a SECOND PowerShell window:
+   cd frontend
+   npm install
+   npm run dev
+
+6. Open:
+   http://localhost:5173
+
+7. Register a synthetic user.
+
+8. Test in this order:
+   Dashboard
+   -> Skills -> Add skill
+   -> Goals -> Create goal
+   -> Practice -> Log practice
+   -> Analytics -> verify metrics
+   -> Community -> publish post
+   -> Like/comment
+   -> Profile -> edit profile
+
+9. API documentation:
+   http://127.0.0.1:8000/docs
+
+10. Backend health:
+   http://127.0.0.1:8000/health
+
+11. Automated tests:
+   cd backend
+   .\.venv\Scripts\Activate.ps1
+   pytest -q
+
+IMPORTANT:
+- Use only dummy/synthetic users and data.
+- Do not put real credentials in .env.
+- Do not delete the backend terminal while using the frontend.
+- Do not use browser refresh as part of normal navigation; routes are designed to work through React Router navigation.
